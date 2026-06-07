@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { v4 as uuid } from "uuid";
 
 function EmployeeForm({employees, setEmployees}) {
   const [firstName, setFirstName] = useState("");
@@ -10,7 +9,7 @@ function EmployeeForm({employees, setEmployees}) {
     e.preventDefault()
     if(password == "admin"){
       const newUser = {
-        id: uuid(),
+        id: Date.now(),
         firstName: firstName,
         lastName: lastName,
         role: role
